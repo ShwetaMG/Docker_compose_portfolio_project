@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  portfolio-site:
+    # 1. Build the image using the Dockerfile in this folder
+    build: .
+    
+    # 2. Map the ports (Host Port : Container Port)
+    ports:
+      - "9090:80"
+    
+    # 3. Setup the Mounts
+    volumes:
+      - .:/usr/share/nginx/html          # Bind Mount: Syncs your local code
+      - site-logs:/var/log/nginx         # Named Volume: Keeps your logs safe
+    
+    # 4.container name
+    container_name: my-prod-portfolio
+
+# named volume
+volumes:
+  site-logs:
