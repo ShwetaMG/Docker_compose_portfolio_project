@@ -36,6 +36,7 @@ Installation & Deployment
 
 Clone the repository:
 git clone https://github.com/ShwetaMG/Docker_compose_portfolio_project.git
+
 cd Docker_compose_portfolio_project
 
 Spin up the infrastructure:
