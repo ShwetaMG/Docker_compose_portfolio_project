@@ -1,18 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer | DevOps & Data Aspirant</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background: #f4f4f4; }
-        .card { background: white; padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
+        header { background: var(--dark); color: white; padding: 4rem 2rem; text-align: center; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+        h1 { margin: 0; font-size: 2.5rem; color: #fff; }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        .tag { background: #e2e8f0; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; margin: 5px; display: inline-block; }
+        .footer { text-align: center; font-size: 0.8rem; color: #64748b; padding: 2rem; }
     </style>
 </head>
 <body>
+
+<header>
+    <h1>Personal Portfolio</h1>
+    <p>Software Engineer & DevOps Enthusiast</p>
+</header>
+
+<div class="container">
     <div class="card">
-        <h1>Hi, I'm a DevOps engineer</h1>
-        <p>This site is running inside a Docker Container! This container image is created using bind mounts method.</p>
-        <p> After containerization, I used named volumes and created volume mount and ran container with volume arguments.</p>
-        <p>now i will create my portfolio with the help of gemini model 3.0</p>
+        <h2>About Me</h2>
+        <p>Experienced Software Engineer and former Technical Consultant with a passion for building scalable, containerized infrastructure. Currently specializing in <strong>DevOps</strong>.</p>
     </div>
+
+    <div class="card">
+        <h2>Technical Skills</h2>
+        <div>
+            <span class="tag">Docker & Compose</span>
+            <span class="tag">AWS Cloud Practitioner</span>
+            <span class="tag">Python (Backend)</span>
+            <span class="tag">SQL / PLSQL</span>
+            <span class="tag">Linux (Ubuntu)</span>
+            <span class="tag">DevOps CI/CD</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Featured Project: Dockerized Infrastructure</h2>
+        <p>This very website is served via an <strong>Nginx</strong> container, managed with <strong>Docker Compose</strong>, and utilizes <strong>Named Volumes</strong> for persistent logging.</p>
+        <p><em>"Infrastructure as Code is the future."</em></p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Deployed with Docker | Check out the logs via <code>docker logs -f my-prod-portfolio</code></p>
+</div>
+
 </body>
 </html>
